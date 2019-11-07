@@ -4,33 +4,56 @@
 
 .navBarParent {
     background-color: #00c6ff96;
-    height: 12.5vh;
-    line-height: 10vh;
-}
-/* Needs to align to the left, on change to mobile pixel width, display none, and instead display a dropdown. */
-.navBarLinkContainer {
-    display: flex;
-}
-/* Weird spacing */
-.navBarLink {
-    text-decoration: none;
-    color: white;
-    font-size: 150%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 2.5vh;
+    min-height: 100px;
+    width: 100%;
 }
 
-/* Doesn't work */
-.innerNavBarLinkText:hover .navBarLink{
+.navBarLinkContainer {
+    display: flex;
+    float: right;
+    margin-top: 40px;
+}
+
+.navBarLinkContainerMobile {
+    display: none;
+}
+
+.innerNavBarLinkText {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    margin-right: 20px;
+}
+
+.navBarLink:hover .innerNavBarLinkText {
     color: darkgray;
 }
 
+.navBarLink {
+    text-decoration: none;
+    height: 1px;
+}
 
-
+/* 
 .navBarLinkDivider {
     color: white;
     margin-top: 0px;
     font-size: 200%;
     margin-top: 2.5vh;
+} */
+
+.logoHolder {
+    float: left;
+    margin-top: -25px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.logoText {
+    color: goldenrod;
+    font-size: 50px;
+}
+
+.S {
+    margin-left: -10px;
 }

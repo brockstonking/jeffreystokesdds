@@ -18,7 +18,7 @@ app.use( (req, res, next) => {
   next();
 })
 
-// Add the below for routing capability
+// Add the below for routing capability for controller files
 //app.use(require('./router'));
 
 var server_host = '0.0.0.0';
