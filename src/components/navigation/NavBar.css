@@ -71,5 +71,23 @@
 }
 
 .menuItemsDropdown {
-    margin-top: 100px;
+    position: fixed;
+    top: 79px;
+    right: 0px;
+}
+
+.dropdownMenuItem {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    padding: 20px;
+}
+
+.dropdownMenuItemContainer {
+    background-color: #00c6ff96;
+    height: 40px;
+}
+
+.dropdownMenuItemContainer:hover .dropdownMenuItemContainer {
+    background-color: #00c6ffcc;
 }

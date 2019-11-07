@@ -7,7 +7,7 @@ class NavBar extends Component {
         super(props);
 
         this.state = {
-            isMobile: false,
+            isMobile: window.innerWidth < 480 ? true : false,
             showMenuItemsDropdown: false
         }
     };
@@ -53,7 +53,7 @@ class NavBar extends Component {
             <img className='menuIcon' src='https://icon-library.net/images/menu-icon-white-png/menu-icon-white-png-27.jpg' alt='' onClick={() => this.dropdownHideOrDisplay()}/>
             <div className={ this.state.showMenuItemsDropdown ? 'menuItemsDropdown' : 'menuItemsDropdownHidden' }>
                 {menuLinkItems.map( e => {
-                    return <div>
+                    return <div className='dropdownMenuItemContainer'>
                         <Link className={`dropdownMenuItem dropdown${e.title.replace(' ', '')}`} to={ e.link } onClick={() => this.dropdownHideOrDisplay()}>{e.title}</Link>
                     </div>
                 })}
