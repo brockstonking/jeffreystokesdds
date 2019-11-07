@@ -15,8 +15,16 @@
 }
 
 .navBarLinkContainerMobile {
-    display: none;
+    float: right;
 }
+
+.menuIcon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+} 
 
 .innerNavBarLinkText {
     color: white;
@@ -56,4 +64,12 @@
 
 .S {
     margin-left: -10px;
+}
+
+.menuItemsDropdownHidden {
+    display: none;
+}
+
+.menuItemsDropdown {
+    margin-top: 100px;
 }
