@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './ContactUs.css';
+import './AboutUs.css';
 
-class ContactUs extends Component {
+class AboutUs extends Component {
     constructor(props){
         super(props);
     };
@@ -9,10 +9,10 @@ class ContactUs extends Component {
     render(){
         return (
             <div>
-                <h1>This is the contact us page.</h1>
+                <h1>This is the about us page.</h1>
             </div>
         )
     };
 }
 
-export default ContactUs;
+export default AboutUs;

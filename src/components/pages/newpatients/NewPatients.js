@@ -9,10 +9,10 @@ class NewPatients extends Component {
     render(){
         return (
             <div>
-
+                <a href='/AnthemHilldDental-NewPatientForm.pdf' download>Click to test download</a>
             </div>
         )
     };
 }
 
-export default NewPatients();
+export default NewPatients;

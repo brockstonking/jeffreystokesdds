@@ -1,0 +1,36 @@
+.testTitle {
+    display: none;
+}
+
+.navBarParent {
+    background-color: #00c6ff96;
+    height: 12.5vh;
+    line-height: 10vh;
+}
+/* Needs to align to the left, on change to mobile pixel width, display none, and instead display a dropdown. */
+.navBarLinkContainer {
+    display: flex;
+}
+/* Weird spacing */
+.navBarLink {
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 2.5vh;
+}
+
+/* Doesn't work */
+.innerNavBarLinkText:hover .navBarLink{
+    color: darkgray;
+}
+
+
+
+.navBarLinkDivider {
+    color: white;
+    margin-top: 0px;
+    font-size: 200%;
+    margin-top: 2.5vh;
+}

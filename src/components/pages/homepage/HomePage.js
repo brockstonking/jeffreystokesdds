@@ -9,10 +9,11 @@ class HomePage extends Component {
     render(){
         return (
             <div>
-
+                <h1 className='jeffreyStokesDDSTitle'>Jeffrey Stokes, DDS</h1>
+                <h3 className='jeffreyStokesDDSSubTitle'>Serving families since 1990</h3>
             </div>
         )
     };
 }
 
-export default HomePage();
+export default HomePage;
