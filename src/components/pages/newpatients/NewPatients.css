@@ -44,6 +44,8 @@
 .newPatientImage {
     height: 70vh;
     filter: blur(3px);
+    margin-left: 10px;
+    margin-top: 12px;
     margin-bottom: 20px;
     z-index: -2000;
 }

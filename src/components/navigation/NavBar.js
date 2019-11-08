@@ -8,7 +8,8 @@ class NavBar extends Component {
 
         this.state = {
             isMobile: window.innerWidth < 716 ? true : false,
-            showMenuItemsDropdown: false
+            showMenuItemsDropdown: false,
+            currentRoute: '/'
         }
     };
 
@@ -19,6 +20,12 @@ class NavBar extends Component {
     }
 
     dropdownHideOrDisplay = () => { this.setState({ showMenuItemsDropdown: this.state.showMenuItemsDropdown ? false : true }) }
+
+    changeCurrentRoute = (val) => {
+        this.setState({
+            currentRoute: val
+        })
+    }
     
     render(){
         window.addEventListener('resize', this.checkIfMobileView)
@@ -44,17 +51,17 @@ class NavBar extends Component {
 
         let menuItems = !this.state.isMobile
         ? <div className='navBarLinkContainer'>
-            <Link className='navBarLink navBarHomePage' to='/'><p className='innerNavBarLinkText' >Home</p></Link>
-            <Link className='navBarLink navBarNewPatient' to='/newpatients'><p className='innerNavBarLinkText'>New Patients</p></Link>
-            <Link className='navBarLink navBarAboutUs' to='/aboutus'><p className='innerNavBarLinkText'>Our Team</p></Link>
-            <Link className='navBarLink navBarContactUs' to='/contactus'><p className='innerNavBarLinkText'>Contact Us</p></Link>
+            <Link className='navBarLink navBarHomePage' to='/' onClick={() => this.changeCurrentRoute('/')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/' ? { color: 'goldenrod' } : {}} >Home</p></Link>
+            <Link className='navBarLink navBarNewPatient' to='/newpatients' onClick={() => this.changeCurrentRoute('/newpatients')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/newpatients' ? { color: 'goldenrod' } : {}} >New Patients</p></Link>
+            <Link className='navBarLink navBarAboutUs' to='/aboutus' onClick={() => this.changeCurrentRoute('/aboutus')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/aboutus' ? { color: 'goldenrod' } : {}} >Our Team</p></Link>
+            <Link className='navBarLink navBarContactUs' to='/contactus' onClick={() => this.changeCurrentRoute('/contactus')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/contactus' ? { color: 'goldenrod' } : {}} >Contact Us</p></Link>
         </div>
         : <div className='navBarLinkContainerMobile'>
             <img className='menuIcon' src='https://icon-library.net/images/menu-icon-white-png/menu-icon-white-png-27.jpg' alt='' onClick={() => this.dropdownHideOrDisplay()}/>
             <div className={ this.state.showMenuItemsDropdown ? 'menuItemsDropdown' : 'menuItemsDropdownHidden' }>
                 {menuLinkItems.map( e => {
                     return <div className={`dropdownMenuItemContainer dropdownMenuItemContainer${ e.title }`}>
-                        <Link className={`dropdownMenuItem dropdown${e.title.replace(' ', '')}`} to={ e.link } onClick={() => this.dropdownHideOrDisplay()}>{e.title}</Link>
+                        <Link className={`dropdownMenuItem dropdown${e.title.replace(' ', '')}`} to={ e.link } onClick={() => this.dropdownHideOrDisplay()} onClick={() => this.changeCurrentRoute(e.link)}>{e.title}</Link>
                     </div>
                 })}
             </div>
