@@ -1,9 +1,8 @@
 .footerParent {
-    height: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-top: 10px;
-    padding-bottom: 45px;
+    padding-bottom: 15px;
     background-color: gainsboro;
 }
 
@@ -28,5 +27,19 @@
 .footerLinks {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 35px;
+    margin-top: 0px;
+}
+
+.footerLinksMobile {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerDescriptionMobile {
+    width: 50%;
+    text-align: left;
+}
+
+.copyWrite {
+    font-size: 10px;
 }

@@ -8,12 +8,13 @@
     position: fixed;
     top: 0;
     height: 100px;
+    z-index: 1000;
 }
-
+    
 .navBarLinkContainer {
     display: flex;
     float: right;
-    margin-top: 40px;
+    margin-top: 27px;
 }
 
 .navBarLinkContainerMobile {
@@ -91,4 +92,18 @@
     background-color: #3c99b3;
     border-top: solid goldenrod 1px;
     height: 40px;
+}
+
+.telephoneNumber {
+    color: white;
+    z-index: 200;
+    font-size: 20px;
+    margin-top: 60px;
+    text-decoration: none;
+    margin-left: 20px;
+    height: 20px;
+}
+
+.telephoneNumber:hover .innerPhoneText {
+    color: goldenrod;
 }

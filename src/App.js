@@ -10,13 +10,13 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isMobile: window.innerWidth < 480 ? true : false
+      isMobile: window.innerWidth < 760 ? true : false
     }
   }
 
   checkIfMobileView = () => {
     this.setState({
-        isMobile: window.innerWidth < 480 ? true : false
+        isMobile: window.innerWidth < 760 ? true : false
     })
 }
 

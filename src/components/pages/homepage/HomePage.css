@@ -23,6 +23,7 @@
     right: 0px;
     min-height: 580px;
     height: 70vh;
+    filter: blur(6px);
 }
 
 .testimonialsParent {

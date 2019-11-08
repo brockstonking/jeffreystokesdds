@@ -4,12 +4,30 @@ import './NewPatients.css';
 class NewPatients extends Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            isMobile: window.innerWidth < 480 ? true : false
+        }
     };
 
+    checkIfMobileView = () => {
+        this.setState({
+            isMobile: window.innerWidth < 716 ? true : false
+        })
+    }
+
     render(){
+        window.addEventListener('resize', this.checkIfMobileView);
         return (
-            <div className='newPatientParent'>
-                <a href='/AnthemHilldDental-NewPatientForm.pdf' download>Click to test download</a>
+            <div className={this.state.isMobile ? 'newPatientParentMobile' : 'newPatientParent'}>
+                <div className={this.state.isMobile ? 'newPatientTitleAndDescriptionMobile' : 'newPatientTitleAndDescription'}>
+                    <h1 className='newPatientTitle'>New Patient Form</h1>
+                    <p className={this.state.isMobile ? 'newPatientDescriptionMobile' : 'newPatientDescription'}>We are honored to welcome you to our dental office family! Before your first appointment, please print and fill out our New Patient Form and bring it to the office with you. This will help reduce the amount of time you spend waiting.</p>
+                    <a href='/AnthemHilldDental-NewPatientForm.pdf' download className='newPatientDownloadLink'><div className='newPatientDownloadButton'><p className='newPatientDownloadText'>Download New Patient Form</p></div></a>
+                </div>
+                <div className={this.state.isMobile ? 'newPatientImageParentMobile' : 'newPatientImageParent'}>
+                    <img src='https://i.ibb.co/RDjmbcX/dentist-tools-2.jpg' alt='dentistry-tools' className='newPatientImage' />
+                </div>
             </div>
         )
     };

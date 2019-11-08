@@ -1,4 +1,57 @@
 .newPatientParent {
-    height: calc(100vh - 200px);
+    min-height: calc(100vh - 315px);
+    margin-top: 150px;
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.newPatientDownloadLink {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.newPatientDownloadButton {
+    background-color: #0e82a4;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 2px;
+    margin: auto;
+}
+
+.newPatientDownloadButton:hover {
+    background-color: #3c99b3;
+}
+
+.newPatientDescription {
+    width: 50%;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: right;
+}
+
+.newPatientDescriptionMobile {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.newPatientImage {
+    height: 70vh;
+    filter: blur(3px);
+    margin-bottom: 20px;
+    z-index: -2000;
+}
+
+.newPatientImageParentMobile {
+    margin-top: 25px;
+}
+
+.newPatientTitleAndDescriptionMobile {
     margin-top: 150px;
 }

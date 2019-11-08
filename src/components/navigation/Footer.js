@@ -33,10 +33,11 @@ class Footer extends Component {
         })
         return (
             <div className='footerParent'>
-                <div className='footerDescription'>
+                <div className={this.props.mobile ? 'footerDescriptionMobile' : 'footerDescription'}>
                     <p>Jeffrey Stokes is a general dentist that has been in practice since 1993. He has served the Henderson/Las Vegas area since that time, and looks forward to continuing to do so.</p>
+                    <p className='copyWrite'>© 2019 Jeffrey Stokes, DDS - Henderson, NV</p>
                 </div>
-                <div className='footerLinks'>
+                <div className={this.props.mobile ? 'footerLinksMobile' : 'footerLinks'}>
                     { footerLinks }
                 </div>
             </div>

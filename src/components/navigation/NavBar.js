@@ -7,14 +7,14 @@ class NavBar extends Component {
         super(props);
 
         this.state = {
-            isMobile: window.innerWidth < 480 ? true : false,
+            isMobile: window.innerWidth < 716 ? true : false,
             showMenuItemsDropdown: false
         }
     };
 
     checkIfMobileView = () => {
         this.setState({
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 716 ? true : false
         })
     }
 
@@ -44,7 +44,7 @@ class NavBar extends Component {
 
         let menuItems = !this.state.isMobile
         ? <div className='navBarLinkContainer'>
-            <Link className='navBarLink navBarHomePage' to='/'><p className='innerNavBarLinkText'>Home</p></Link>
+            <Link className='navBarLink navBarHomePage' to='/'><p className='innerNavBarLinkText' >Home</p></Link>
             <Link className='navBarLink navBarNewPatient' to='/newpatients'><p className='innerNavBarLinkText'>New Patients</p></Link>
             <Link className='navBarLink navBarAboutUs' to='/aboutus'><p className='innerNavBarLinkText'>Our Team</p></Link>
             <Link className='navBarLink navBarContactUs' to='/contactus'><p className='innerNavBarLinkText'>Contact Us</p></Link>
@@ -63,6 +63,7 @@ class NavBar extends Component {
             <div className='navBarParent'>
                 <div className='logoHolder'>
                     <p className='logoText J'>J</p><p className='logoText S'>S</p>
+                    <a href='tel:7025664133' className='telephoneNumber'><p className='innerPhoneText'>(702) 566-4133</p></a>
                 </div>
                 { menuItems }
             </div>
