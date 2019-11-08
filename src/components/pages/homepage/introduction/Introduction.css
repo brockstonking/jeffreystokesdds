@@ -1,0 +1,13 @@
+.introductionParent {
+    margin-top: 30vh;
+}
+
+.introductionParagraph {
+    width: 50%;
+    margin: auto;
+}
+
+.introductionParagraphMobile {
+    width: 85%;
+    margin: auto;
+}

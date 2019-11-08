@@ -3,9 +3,11 @@
 }
 
 .navBarParent {
-    background-color: #00c6ff96;
-    min-height: 100px;
+    background-color: #3c99b3;
     width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100px;
 }
 
 .navBarLinkContainer {
@@ -22,8 +24,8 @@
     height: 100px;
     width: 100px;
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 10px;
+    right: 10px;
 } 
 
 .innerNavBarLinkText {
@@ -72,8 +74,9 @@
 
 .menuItemsDropdown {
     position: fixed;
-    top: 79px;
+    top: 100px;
     right: 0px;
+
 }
 
 .dropdownMenuItem {
@@ -81,16 +84,11 @@
     text-decoration: none;
     font-size: 150%;
     padding: 20px;
+    margin: 0px;
 }
 
 .dropdownMenuItemContainer {
-    background-color: #00c6ff96;
-    border-left: solid goldenrod 1px;
-    border-bottom: solid goldenrod 1px;
-    border-right: solid goldenrod 1px;
-    height: 40px;
-}
-
-.dropdownMenuItemContainerHome {
+    background-color: #3c99b3;
     border-top: solid goldenrod 1px;
+    height: 40px;
 }

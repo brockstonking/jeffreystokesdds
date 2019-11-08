@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   margin-top: -21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /* 
 .App-logo {

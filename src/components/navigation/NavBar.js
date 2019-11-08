@@ -40,7 +40,7 @@ class NavBar extends Component {
                 title: 'Contact Us',
                 link: '/contactus'
             }
-        ]
+        ];
 
         let menuItems = !this.state.isMobile
         ? <div className='navBarLinkContainer'>

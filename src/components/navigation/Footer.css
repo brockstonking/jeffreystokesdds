@@ -1,0 +1,32 @@
+.footerParent {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 45px;
+    background-color: gainsboro;
+}
+
+.footerLink {
+    text-decoration: none;
+}
+
+.footerLinkText:hover > .footerLinkText {
+    color: goldenrod;
+}
+
+.footerDescription {
+    width: 20%;
+    text-align: left;
+}
+
+.footerLinkText {
+    color: #0e82a4;
+    margin: 20px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}

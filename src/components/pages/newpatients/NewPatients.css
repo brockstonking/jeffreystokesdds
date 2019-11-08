@@ -1,0 +1,4 @@
+.newPatientParent {
+    height: calc(100vh - 200px);
+    margin-top: 150px;
+}

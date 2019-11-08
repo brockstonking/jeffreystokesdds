@@ -35,7 +35,7 @@ class Testimonials extends Component {
         ];
 
         return (
-            <div>
+            <div className='testimonialsParent'>
                 <h1 className="testimonialsTitle">Testimonials</h1>
                 
             </div>

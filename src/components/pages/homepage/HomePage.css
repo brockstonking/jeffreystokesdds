@@ -1,5 +1,6 @@
 .titleAndSubTitleParent {
-    margin-top: 30vh;
+    margin-top: 45vh;
+    margin-top: 55vh;
     background-color: #d9d8bab8;
     min-height: 200px;
 }
@@ -17,13 +18,11 @@
 
 .homePageMainPhoto {
     position: absolute;
-    top: -10px;
+    top: 90px;
     z-index: -100;
     right: 0px;
-    width: 115vw;
-    min-width: 1500px;
-    min-height: 680px;
-    height: 80vh;
+    min-height: 580px;
+    height: 70vh;
 }
 
 .testimonialsParent {

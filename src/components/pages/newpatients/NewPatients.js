@@ -8,7 +8,7 @@ class NewPatients extends Component {
 
     render(){
         return (
-            <div>
+            <div className='newPatientParent'>
                 <a href='/AnthemHilldDental-NewPatientForm.pdf' download>Click to test download</a>
             </div>
         )
