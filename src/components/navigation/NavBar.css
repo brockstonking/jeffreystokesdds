@@ -77,15 +77,20 @@
     position: fixed;
     top: 100px;
     right: 0px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdownMenuItem {
     color: white;
     text-decoration: none;
     font-size: 150%;
-    padding: 20px;
     margin: 0px;
+    background-color: #3c99b3;
+    border-top: solid goldenrod 1px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .dropdownMenuItemContainer {

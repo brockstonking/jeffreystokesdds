@@ -59,11 +59,10 @@ class NavBar extends Component {
         : <div className='navBarLinkContainerMobile'>
             <img className='menuIcon' src='https://icon-library.net/images/menu-icon-white-png/menu-icon-white-png-27.jpg' alt='' onClick={() => this.dropdownHideOrDisplay()}/>
             <div className={ this.state.showMenuItemsDropdown ? 'menuItemsDropdown' : 'menuItemsDropdownHidden' }>
-                {menuLinkItems.map( e => {
-                    return <div className={`dropdownMenuItemContainer dropdownMenuItemContainer${ e.title }`}>
-                        <Link className={`dropdownMenuItem dropdown${e.title.replace(' ', '')}`} to={ e.link } onClick={() => this.dropdownHideOrDisplay()} onClick={() => this.changeCurrentRoute(e.link)}>{e.title}</Link>
-                    </div>
-                })}
+                <Link className='dropdownMenuItem dropdownHome' to='/' onClick={() => {this.changeCurrentRoute('/'); this.dropdownHideOrDisplay(); }} >Home</Link>
+                <Link className='dropdownMenuItem dropdownNewPatients' to='/newpatients' onClick={() => {this.changeCurrentRoute('/newpatients'); this.dropdownHideOrDisplay(); }} >New Patients</Link>
+                <Link className='dropdownMenuItem dropdownAboutUs' to='/aboutus' onClick={() => {this.changeCurrentRoute('/aboutus'); this.dropdownHideOrDisplay(); }} >About Us</Link>
+               <Link className='dropdownMenuItem dropdownContactUs' to='/contactus' onClick={() => {this.changeCurrentRoute('/contactus'); this.dropdownHideOrDisplay(); }} >Contact Us</Link>
             </div>
         </div>
         return (
