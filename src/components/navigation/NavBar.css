@@ -85,9 +85,12 @@
 
 .dropdownMenuItemContainer {
     background-color: #00c6ff96;
+    border-left: solid goldenrod 1px;
+    border-bottom: solid goldenrod 1px;
+    border-right: solid goldenrod 1px;
     height: 40px;
 }
 
-.dropdownMenuItemContainer:hover .dropdownMenuItemContainer {
-    background-color: #00c6ffcc;
+.dropdownMenuItemContainerHome {
+    border-top: solid goldenrod 1px;
 }
