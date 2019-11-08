@@ -1,16 +1,16 @@
 .titleAndSubTitleParent {
     margin-top: 30vh;
-    background-color: #a9a9a9cc;
+    background-color: #d9d8bab8;
     min-height: 200px;
 }
 
 .jeffreyStokesDDSTitle {
-    color: #195567fa;
+    color: #0e82a4;
     font-size: 400%;
 }
 
 .jeffreyStokesDDSSubTitle {
-    color: #195567fa;
+    color: #0e82a4;
     font-size: 200%;
     padding-bottom: 15px;
 }
@@ -22,10 +22,10 @@
     right: 0px;
     width: 115vw;
     min-width: 1500px;
-    min-height: 650px;
+    min-height: 680px;
     height: 80vh;
 }
 
 .testimonialsParent {
-    margin-top: 20vh;
+    margin-top: 25vh;
 }

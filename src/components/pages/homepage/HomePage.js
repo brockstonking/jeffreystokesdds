@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HomePage.css';
+import Testimonials from './testimonials/Testimonials';
 
 class HomePage extends Component {
     constructor(props){
@@ -16,8 +17,8 @@ class HomePage extends Component {
                     <h1 className='jeffreyStokesDDSTitle'>Jeffrey Stokes, DDS</h1>
                     <h3 className='jeffreyStokesDDSSubTitle'>Serving Families Since 1990</h3>
                 </div>
-                <div classname='testimonialsparent'>
-                    <h1>testimonials</h1>
+                <div className='testimonialsParent'>
+                    <Testimonials />
                 </div>
             </div>
         )
