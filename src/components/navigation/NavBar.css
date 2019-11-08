@@ -88,7 +88,11 @@
 }
 
 .dropdownMenuItemContainer {
+<<<<<<< HEAD
     background-color: #3c99b3;
+=======
+    background-color: #00c6ff96;
+>>>>>>> cd27e1f8a1be7e70bb67543d4a8c4477d76fc997
     border-top: solid goldenrod 1px;
     height: 40px;
 }
