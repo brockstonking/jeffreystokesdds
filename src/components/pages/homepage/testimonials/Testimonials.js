@@ -39,6 +39,22 @@ class Testimonials extends Component {
     }
     
     componentDidMount () {
+        for (let i = 0; i <= 500; i++) {
+            setTimeout(() => {
+                this.setState({
+                    testimonialOpacity: this.state.testimonialOpacity + .002
+                })
+            }, 1)
+        }
+        setTimeout(() => {
+            for (let i = 0; i <= 500; i++) {
+                setTimeout(() => {
+                    this.setState({
+                        testimonialOpacity: this.state.testimonialOpacity - .002
+                    })
+                }, 1)
+            }
+        }, 6500)
         setInterval(() => {
             this.setState({
                 currentTestimonialIndex: this.state.currentTestimonialIndex < this.state.testimonials.length - 1 ? this.state.currentTestimonialIndex + 1 : 0
@@ -60,22 +76,6 @@ class Testimonials extends Component {
                 }
             }, 6500)
         }, 7000);
-        // setInterval(() => {
-		// 	this.setState({
-		// 		fade: this.state.fade === 'in' ? 'out' : 'in'
-		// 	})
-        // }, 1000);
-        // setInterval(() => {
-        //     if (this.state.fade === 'in' && this.state.testimonialOpacity < 1) {
-        //         this.setState({
-        //             testimonialOpacity: this.state.testimonialOpacity + .004
-        //         })
-        //     } else if (this.state.fade === 'out' && this.state.testimonialOpacity > 0) {
-        //         this.setState({
-        //             testimonialOpacity: this.state.testimonialOpacity - .004
-        //         })
-        //     }
-        // }, 1);
     }
 
     render () {
