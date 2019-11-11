@@ -5,6 +5,14 @@
     min-height: 200px;
 }
 
+.titleAndSubTitleParentMobile {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+    margin-top: -25px;
+    margin-bottom: -75px;
+}
+
 .jeffreyStokesDDSTitle {
     color: #0e82a4;
     font-size: 400%;
@@ -25,6 +33,14 @@
     min-height: 580px;
     height: 70vh;
     filter: blur(6px);
+    width: 105vw;
+}
+
+.homePageMainPhotoMobile {
+    margin-top: 100px;
+    z-index: -100;
+    width: 100vw;
+    filter: blur(3px);
 }
 
 .testimonialsParent {

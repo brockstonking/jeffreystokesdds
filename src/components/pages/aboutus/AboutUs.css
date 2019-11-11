@@ -1,0 +1,45 @@
+.aboutUsParent {
+    min-height: 85vh;
+    width: 70%;
+    margin: auto;
+}
+
+.aboutUsParentMobile {
+    width: 90%;
+    margin: auto;
+}
+
+.individualBioParent {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.individualBioParentMobile {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.aboutUsTitle {
+    margin-top: 150px;
+}
+
+.bioFor0 {
+    margin-top: 75px;
+}
+
+.bioFor0Mobile {
+    margin-top: 150px;
+}
+
+.bioImg {
+    width: 30%;
+}
+
+.bioImgMobile {
+    width: 90%;
+}
+
+
+.bioDescription {
+    text-align: left;
+}

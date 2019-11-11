@@ -23,9 +23,9 @@ class HomePage extends Component {
         return (
             <div>
                 <div className='homePageMainPhotoParent'>
-                    <img className='homePageMainPhoto' src='https://i.ibb.co/DC1Tcg5/smile-2.jpg' alt='' />
+                    <img className={this.state.isMobile ? 'homePageMainPhotoMobile' : 'homePageMainPhoto'} src='https://i.ibb.co/DC1Tcg5/smile-2.jpg' alt='' />
                 </div>
-                <div className='titleAndSubTitleParent'>
+                <div className={this.state.isMobile ? 'titleAndSubTitleParentMobile' : 'titleAndSubTitleParent'}>
                     <h1 className='jeffreyStokesDDSTitle'>Jeffrey Stokes, DDS</h1>
                     <h3 className='jeffreyStokesDDSSubTitle'>Serving Families Since 1993</h3>
                 </div>
