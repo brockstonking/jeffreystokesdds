@@ -54,7 +54,7 @@ class Testimonials extends Component {
                     })
                 }, 1)
             }
-        }, 6500)
+        }, 9500)
         setInterval(() => {
             this.setState({
                 currentTestimonialIndex: this.state.currentTestimonialIndex < this.state.testimonials.length - 1 ? this.state.currentTestimonialIndex + 1 : 0
@@ -74,8 +74,8 @@ class Testimonials extends Component {
                         })
                     }, 1)
                 }
-            }, 6500)
-        }, 7000);
+            }, 9500)
+        }, 10000);
     }
 
     render () {
@@ -91,9 +91,9 @@ class Testimonials extends Component {
         
 
         let testimonialDisplayed = <div className='individualTestimonial' style={{opacity: this.state.testimonialOpacity}}>
-            { stars }
-            <p>{this.state.testimonials[this.state.currentTestimonialIndex].review}</p>
-            <p>-{this.state.testimonials[this.state.currentTestimonialIndex].firstName}</p>
+            <div className='testimonialStars'>{ stars }</div>
+            <p className='testimonialReview'>{this.state.testimonials[this.state.currentTestimonialIndex].review}</p>
+            <p className='testimonialName'>-{this.state.testimonials[this.state.currentTestimonialIndex].firstName}</p>
         </div>
         
         return (

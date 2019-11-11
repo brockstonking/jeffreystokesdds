@@ -8,6 +8,7 @@
 .jeffreyStokesDDSTitle {
     color: #0e82a4;
     font-size: 400%;
+    padding-top: 15px;
 }
 
 .jeffreyStokesDDSSubTitle {
@@ -28,4 +29,9 @@
 
 .testimonialsParent {
     margin-top: 25vh;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 250%;
 }

@@ -1,0 +1,40 @@
+.getDirectionsButton {
+    background-color: #0e82a4;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 2px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.getDirectionsText {
+    margin: auto;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.getDirectionsButton:hover {
+    background-color: #3c99b3;
+}
+
+.locationParent {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.locationParentMobile {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.locationDivImage {
+    width: 100%;
+    margin-bottom: 25px;
+}

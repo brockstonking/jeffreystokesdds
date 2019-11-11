@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './HomePage.css';
 import Testimonials from './testimonials/Testimonials';
 import Introduction from './introduction/Introduction';
+import Location from './location/Location';
 
 class HomePage extends Component {
     constructor(props){
@@ -26,13 +27,16 @@ class HomePage extends Component {
                 </div>
                 <div className='titleAndSubTitleParent'>
                     <h1 className='jeffreyStokesDDSTitle'>Jeffrey Stokes, DDS</h1>
-                    <h3 className='jeffreyStokesDDSSubTitle'>Serving Families Since 1990</h3>
+                    <h3 className='jeffreyStokesDDSSubTitle'>Serving Families Since 1993</h3>
                 </div>
                 <div className='homePageIntroductionParent'>
                     <Introduction mobile={ this.state.isMobile } />
                 </div>
                 <div className='homePageTestimonialsParent'>
                     <Testimonials mobile={ this.state.isMobile } />
+                </div>
+                <div>
+                    <Location mobile={ this.state.isMobile } />
                 </div>
             </div>
         )
