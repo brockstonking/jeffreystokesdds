@@ -10,6 +10,6 @@ export default (
         <Route path='/home' component={ HomePage } />
         <Route path='/newpatients' component={ NewPatients } />
         <Route path='/contactus' component={ ContactUs } />
-        <Route path='/aboutus' component={ AboutUs } />
+        <Route path='/ourteam' component={ AboutUs } />
     </Switch>
 )
