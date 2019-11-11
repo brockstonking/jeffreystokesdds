@@ -24,7 +24,7 @@ class App extends Component {
   render(){
     window.addEventListener('resize', this.checkIfMobileView);
     return(
-      <Router>
+      <Router basename='/'>
         <div className='App'>
           <NavBar mobile={this.state.isMobile} />
           { routes }
