@@ -1,0 +1,42 @@
+.contactUsTitle {
+    margin: auto;
+    margin-top: 200px;
+    width: 60%;
+}
+
+.contactUsTitleMobile {
+    margin: auto;
+    margin-top: 150px;
+    width: 90%;
+}
+
+.inputTitle {
+    margin-bottom: 5px;
+}
+.inputTitleMobile {
+    margin-bottom: 5px;
+}
+
+.contactUsForm {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.contactUsFormMobile {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.contactUsMainBody {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contactUsTelephone {
+    text-decoration: none;
+    color: #3c99b3;
+}

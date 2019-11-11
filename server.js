@@ -3,10 +3,11 @@ require('dotenv').config();
 const bodyParser = require('body-parser'); 
 const cors = require('cors');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 const app = express();
 
-const { PORT, DATABASE_URL, SESSION_SECRET } = process.env;
+const { PORT } = process.env;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,6 +18,31 @@ app.use( (req, res, next) => {
   console.log(Date(), req);
   next();
 })
+
+app.post('/api/send_email', (req, res, next) => {
+  const { name, email, serviceRequested, prefferedTime, notesOrQuestions } = req.body;
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'jeffreystokesddswebsite@gmail.com',
+      pass: 'iamapassword!'
+    }
+  });
+
+  const mailOptions = {
+    from: 'jeffreystokesddswebsite@gmail.com',
+    to: 'brockston.king@gmail.com',
+    subject: 'New message from JS, DDS website:',
+    html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Requested Service: ${serviceRequested}</p><p>Preffered Time of Day: ${prefferedTime}</p><p>Questions/Notes: ${notesOrQuestions}</p>`
+  }
+
+  transporter.sendMail(mailOptions, (err, info) => {
+    console.log( err ? err : info);
+  })
+
+  res.status(200).send('Message sent')
+})
+
 
 // Add the below for routing capability for controller files
 //app.use(require('./router'));

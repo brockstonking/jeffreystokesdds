@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './NewPatients.css';
+import DentalTools from './dentistTools.jpg';
 
 class NewPatients extends Component {
     constructor(props){
@@ -26,7 +27,7 @@ class NewPatients extends Component {
                     <a href='/AnthemHilldDental-NewPatientForm.pdf' download className='newPatientDownloadLink'><div className='newPatientDownloadButton'><p className='newPatientDownloadText'>Download New Patient Form</p></div></a>
                 </div>
                 <div className={this.state.isMobile ? 'newPatientImageParentMobile' : 'newPatientImageParent'}>
-                    <img src='https://i.ibb.co/RDjmbcX/dentist-tools-2.jpg' alt='dentistry-tools' className='newPatientImage' />
+                    <img src={DentalTools} alt='dentistry-tools' className='newPatientImage' />
                 </div>
             </div>
         )

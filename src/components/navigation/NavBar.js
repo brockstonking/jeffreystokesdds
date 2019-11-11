@@ -7,7 +7,7 @@ class NavBar extends Component {
         super(props);
 
         this.state = {
-            isMobile: window.innerWidth < 716 ? true : false,
+            isMobile: window.innerWidth < 730 ? true : false,
             showMenuItemsDropdown: false,
             currentRoute: '/'
         }
@@ -15,7 +15,7 @@ class NavBar extends Component {
 
     checkIfMobileView = () => {
         this.setState({
-            isMobile: window.innerWidth < 716 ? true : false
+            isMobile: window.innerWidth < 730 ? true : false
         })
     }
 

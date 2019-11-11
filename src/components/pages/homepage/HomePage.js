@@ -18,6 +18,7 @@ class HomePage extends Component {
             isMobile: window.innerWidth < 480 ? true : false
         })
     }
+    
     render(){
         window.addEventListener('resize', this.checkIfMobileView);
         return (
