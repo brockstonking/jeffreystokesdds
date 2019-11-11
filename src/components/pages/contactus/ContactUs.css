@@ -59,10 +59,14 @@
 .contactUsImageMobile {
     margin-bottom: 50px;
     width: 90%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px silver;
 }
 
 .contactUsImage {
     width: 40%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px silver;
 }
 
 .contactUsSubmitEmailButton {
@@ -78,4 +82,8 @@
 
 .contactUsSubmitEmailButton:hover {
     background-color: #3c99b3;
+}
+
+.contactUsTitleMobile {
+    font-size: 20px;
 }

@@ -43,11 +43,12 @@
 
 .newPatientImage {
     height: 70vh;
-    filter: blur(3px);
+    border-radius: 2px;
     margin-left: 10px;
     margin-top: 12px;
     margin-bottom: 20px;
     z-index: -2000;
+    box-shadow: 0px 0px 10px silver;
 }
 
 .newPatientImageParentMobile {

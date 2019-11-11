@@ -14,7 +14,8 @@ class ContactUs extends Component {
             serviceRequested: '',
             prefferedTime: '',
             notesOrQuestions: '',
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 480 ? true : false,
+            disabled: false
         }
     };
 
@@ -33,6 +34,9 @@ class ContactUs extends Component {
     //add phone
 
     sendEmail = () => {
+        this.setState({
+            disabled: true
+        })
         const {
             name,
             phone,
@@ -50,7 +54,23 @@ class ContactUs extends Component {
                 prefferedTime: prefferedTime,
                 notesOrQuestions: notesOrQuestions
             })
-            .then(results => window.alert(results));
+            .then(results => {
+                this.setState({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    serviceRequested: '',
+                    prefferedTime: '',
+                    notesOrQuestions: '',
+                    disabled: false
+                });
+                window.alert(results.data.response);
+                console.log(results.data.info);
+            })
+            .catch( err => {
+                console.log(err)
+                window.alert('There was an error.')
+            });
         } else {
             window.alert('Please complete all required fields to proceed.')
         }
@@ -69,27 +89,27 @@ class ContactUs extends Component {
                     <div className={this.state.isMobile ? 'contactUsFormMobile' : 'contactUsForm'} >
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Name*</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='name' onChange={ e => this.updateState(e.target)} value={this.state.name} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='name' onChange={ e => this.updateState(e.target)} value={this.state.name} />
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Email*</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='email' onChange={ e => this.updateState(e.target)} value={this.state.email} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='email' onChange={ e => this.updateState(e.target)} value={this.state.email} />
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Phone</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='phone' onChange={ e => this.updateState(e.target)} value={this.state.phone} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='phone' onChange={ e => this.updateState(e.target)} value={this.state.phone} />
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Service you are requesting (checkup, crown, etc.)</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='serviceRequested' onChange={ e => this.updateState(e.target)} value={this.state.serviceRequested} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='serviceRequested' onChange={ e => this.updateState(e.target)} value={this.state.serviceRequested} />
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Preferred time of day</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='prefferedTime' onChange={ e => this.updateState(e.target)} value={this.state.prefferedTime} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='prefferedTime' onChange={ e => this.updateState(e.target)} value={this.state.prefferedTime} />
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Questions or additional notes*</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
+                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
                         </div>
                         <div onClick={() => this.sendEmail()} className='contactUsSubmitEmailButton'>Submit</div>
                     </div>
