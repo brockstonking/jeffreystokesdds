@@ -59,12 +59,13 @@ class ContactUs extends Component {
 
     render(){
         window.addEventListener('resize', this.checkIfMobileView);
-
+        const imgForMobile = !this.state.isMobile ? null : <img className={this.state.isMobile ? 'contactUsImageMobile' : 'contactUsImage'} src={DentalTools3} alt='' />
+        const imgForDesktop = this.state.isMobile ? null : <img className={this.state.isMobile ? 'contactUsImageMobile' : 'contactUsImage'} src={DentalTools3} alt='' />
         return (
             <div className={this.state.isMobile ? 'contactUsParentMobile' : 'contactUsParent'}>
                 <h1 className={this.state.isMobile ? 'contactUsTitleMobile' : 'contactUsTitle'}>If you have questions, please call us at <a href='tel:7025664133' className='contactUsTelephone'>(702) 566-4133</a>, or if you prefer you may ask a question or request an appointment below:</h1>
                 <div className={this.state.isMobile ? 'contactUsMainBodyMobile' : 'contactUsMainBody'}>
-                    <img className={this.state.isMobile ? 'contactUsImageMobile' : 'contactUsImage'} src={DentalTools3} alt='' />
+                    {imgForDesktop}
                     <div className={this.state.isMobile ? 'contactUsFormMobile' : 'contactUsForm'} >
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Name*</p>
@@ -90,8 +91,9 @@ class ContactUs extends Component {
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Questions or additional notes*</p>
                             <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
                         </div>
-                        <div onClick={() => this.sendEmail()}>Submit</div>
+                        <div onClick={() => this.sendEmail()} className='contactUsSubmitEmailButton'>Submit</div>
                     </div>
+                    {imgForMobile}
                 </div>
             </div>
         )

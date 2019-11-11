@@ -20,10 +20,11 @@
 .contactUsForm {
     margin-top: 25px;
     margin-bottom: 50px;
+    width: 40%;
 }
 
 .contactUsFormMobile {
-    margin-top: 25px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -39,4 +40,42 @@
 .contactUsTelephone {
     text-decoration: none;
     color: #3c99b3;
+}
+
+.inputParent {
+    text-align: left;
+}
+
+.inputTitle {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.inputTitleMobile {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.contactUsImageMobile {
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+.contactUsImage {
+    width: 40%;
+}
+
+.contactUsSubmitEmailButton {
+    background-color: #0e82a4;
+    cursor: pointer;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.contactUsSubmitEmailButton:hover {
+    background-color: #3c99b3;
 }
