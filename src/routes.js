@@ -7,7 +7,7 @@ import AboutUs from './components/pages/aboutus/AboutUs';
 
 export default (
     <Switch>
-        <Route exact path='/' component={ HomePage } />
+        <Route path='/home' component={ HomePage } />
         <Route path='/newpatients' component={ NewPatients } />
         <Route path='/contactus' component={ ContactUs } />
         <Route path='/aboutus' component={ AboutUs } />
