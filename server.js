@@ -54,5 +54,5 @@ app.get('/*', (req, res) => {
 // })
 
 app.listen(process.env.PORT || 4005, () => {
-  console.log(`Listening on port ${ port }`);
+  console.log(`Listening on port ${ process.env.PORT || 4005 }`);
 })
