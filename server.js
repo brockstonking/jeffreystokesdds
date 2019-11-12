@@ -43,7 +43,7 @@ app.post('/api/send_email', (req, res, next) => {
 })
 
 var server_host = '0.0.0.0';
-const port = PORT || 4005
+const port = process.env.PORT || 4005
 
 app.get('/*', (req, res) => {
   res.sendFile('index.html', {
