@@ -46,8 +46,8 @@ app.post('/api/send_email', (req, res, next) => {
 // Add the below for routing capability for controller files
 //app.use(require('./router'));
 
-var server_host = '0.0.0.0';
-const port = PORT || 4005
+// var server_host = '0.0.0.0';
+const port = process.env.PORT || 4005
 
 // app.get('/*', (req, res) => {
 //   res.sendFile('index.html', {
