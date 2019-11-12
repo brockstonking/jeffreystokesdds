@@ -40,6 +40,7 @@ class AboutUs extends Component {
                 <p className='bioDescription' >{ e.bio }</p>
             </div>
         });
+        debugger
 
         return (
             <div className={this.state.isMobile ? 'aboutUsParentMobile' : 'aboutUsParent'}>
