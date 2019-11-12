@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/jefferystokesdds/static/css/main.026092d1.chunk.css",
-    "main.js": "/jefferystokesdds/static/js/main.5fffc6ea.chunk.js",
-    "main.js.map": "/jefferystokesdds/static/js/main.5fffc6ea.chunk.js.map",
-    "runtime-main.js": "/jefferystokesdds/static/js/runtime-main.00838e7b.js",
-    "runtime-main.js.map": "/jefferystokesdds/static/js/runtime-main.00838e7b.js.map",
-    "static/js/2.61af4c14.chunk.js": "/jefferystokesdds/static/js/2.61af4c14.chunk.js",
-    "static/js/2.61af4c14.chunk.js.map": "/jefferystokesdds/static/js/2.61af4c14.chunk.js.map",
-    "index.html": "/jefferystokesdds/index.html",
-    "precache-manifest.bfb9ff88fa37a5d7f31f95dc5eefd72a.js": "/jefferystokesdds/precache-manifest.bfb9ff88fa37a5d7f31f95dc5eefd72a.js",
-    "service-worker.js": "/jefferystokesdds/service-worker.js",
-    "static/css/main.026092d1.chunk.css.map": "/jefferystokesdds/static/css/main.026092d1.chunk.css.map",
-    "static/media/DrStokes.jpg": "/jefferystokesdds/static/media/DrStokes.b73cb3cc.jpg",
-    "static/media/SandraStokes.jpg": "/jefferystokesdds/static/media/SandraStokes.544c84a1.jpg",
-    "static/media/dentalTools3.png": "/jefferystokesdds/static/media/dentalTools3.27c4b0d6.png",
-    "static/media/dentistTools.jpg": "/jefferystokesdds/static/media/dentistTools.c48eab3e.jpg"
+    "main.css": "/jeffreystokesdds/static/css/main.026092d1.chunk.css",
+    "main.js": "/jeffreystokesdds/static/js/main.7c11e7e6.chunk.js",
+    "main.js.map": "/jeffreystokesdds/static/js/main.7c11e7e6.chunk.js.map",
+    "runtime-main.js": "/jeffreystokesdds/static/js/runtime-main.80d6358e.js",
+    "runtime-main.js.map": "/jeffreystokesdds/static/js/runtime-main.80d6358e.js.map",
+    "static/js/2.61af4c14.chunk.js": "/jeffreystokesdds/static/js/2.61af4c14.chunk.js",
+    "static/js/2.61af4c14.chunk.js.map": "/jeffreystokesdds/static/js/2.61af4c14.chunk.js.map",
+    "index.html": "/jeffreystokesdds/index.html",
+    "precache-manifest.ebf3de893bd0076ccb988c00b9645074.js": "/jeffreystokesdds/precache-manifest.ebf3de893bd0076ccb988c00b9645074.js",
+    "service-worker.js": "/jeffreystokesdds/service-worker.js",
+    "static/css/main.026092d1.chunk.css.map": "/jeffreystokesdds/static/css/main.026092d1.chunk.css.map",
+    "static/media/DrStokes.jpg": "/jeffreystokesdds/static/media/DrStokes.b73cb3cc.jpg",
+    "static/media/SandraStokes.jpg": "/jeffreystokesdds/static/media/SandraStokes.544c84a1.jpg",
+    "static/media/dentalTools3.png": "/jeffreystokesdds/static/media/dentalTools3.27c4b0d6.png",
+    "static/media/dentistTools.jpg": "/jeffreystokesdds/static/media/dentistTools.c48eab3e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.00838e7b.js",
+    "static/js/runtime-main.80d6358e.js",
     "static/js/2.61af4c14.chunk.js",
     "static/css/main.026092d1.chunk.css",
-    "static/js/main.5fffc6ea.chunk.js"
+    "static/js/main.7c11e7e6.chunk.js"
   ]
 }
