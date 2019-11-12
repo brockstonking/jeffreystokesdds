@@ -3,7 +3,6 @@ require('dotenv').config();
 const bodyParser = require('body-parser'); 
 const cors = require('cors');
 const path = require('path');
-const nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -11,6 +10,7 @@ const { PORT } = process.env;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/build')));
 
@@ -42,19 +42,14 @@ app.post('/api/send_email', (req, res, next) => {
   })
 })
 
+var server_host = '0.0.0.0';
+const port = PORT || 4005
 
-// Add the below for routing capability for controller files
-//app.use(require('./router'));
-
-// var server_host = '0.0.0.0';
-const port = process.env.PORT || 4005
-
-// app.get('/*', (req, res) => {
-//   res.sendFile('index.html', {
-//     root: path.join(__dirname, "build")
-//   })
-// });
-
+app.get('/*', (req, res) => {
+  res.sendFile('index.html', {
+    root: path.join(__dirname, "build")
+  })
+});
 
 app.listen(port, server_host, () => {
     console.log(`Listening on port ${ port }`);
