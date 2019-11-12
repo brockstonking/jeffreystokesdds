@@ -42,8 +42,8 @@ app.post('/api/send_email', (req, res, next) => {
   })
 })
 
-var server_host = '0.0.0.0';
-const port = process.env.PORT || 4005
+// Checking below
+// var server_host = '0.0.0.0';
 
 app.get('/*', (req, res) => {
   res.sendFile('index.html', {
@@ -51,6 +51,11 @@ app.get('/*', (req, res) => {
   })
 });
 
-app.listen(port, server_host, () => {
-    console.log(`Listening on port ${ port }`);
+// Checking below. References '0.0.0.0' server_host
+// app.listen(process.env.PORT || 4005, server_host, () => {
+//     console.log(`Listening on port ${ port }`);
+// })
+
+app.listen(process.env.PORT || 4005, server_host, () => {
+  console.log(`Listening on port ${ port }`);
 })
