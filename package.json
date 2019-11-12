@@ -42,6 +42,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://brockstonking.github.io",
+  "proxy": "http://localhost:3001",
   "devDependencies": {}
 }
