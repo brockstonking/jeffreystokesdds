@@ -49,11 +49,19 @@ app.post('/api/send_email', (req, res, next) => {
 var server_host = '0.0.0.0';
 const port = PORT || 4005
 
-app.get('/*', (req, res) => {
-  res.sendFile('index.html', {
-    root: path.join(__dirname, "build")
-  })
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile('index.html', {
+//     root: path.join(__dirname, "build")
+//   })
+// });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 app.listen(port, server_host, () => {
     console.log(`Listening on port ${ port }`);
