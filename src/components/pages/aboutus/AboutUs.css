@@ -20,7 +20,7 @@
 }
 
 .aboutUsTitle {
-    margin-top: 150px;
+    margin-top: 75px;
 }
 
 .bioFor0 {
@@ -28,7 +28,7 @@
 }
 
 .bioFor0Mobile {
-    margin-top: 150px;
+    margin-top: 75px;
 }
 
 .bioImg {
@@ -39,7 +39,26 @@
     width: 90%;
 }
 
-
 .bioDescription {
-    text-align: left;
+    text-align: justify;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.bioDescriptionMobile {
+    text-align: justify;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.aboutUsStokesTeamPhoto {
+    width: 70%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.aboutUsStokesTeamPhotoMobile {
+    width: 90%;
+    margin: auto;
+    margin-top: 150px;
 }

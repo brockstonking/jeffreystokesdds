@@ -109,7 +109,7 @@ class ContactUs extends Component {
                         </div>
                         <div className={this.state.isMobile ? 'inputParentMobile' : 'inputParent'}>
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Questions or additional notes*</p>
-                            <input className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
+                            <textarea rows='3' className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
                         </div>
                         <div onClick={() => this.sendEmail()} className='contactUsSubmitEmailButton'>Submit</div>
                     </div>

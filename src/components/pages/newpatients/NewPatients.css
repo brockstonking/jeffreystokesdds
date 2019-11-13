@@ -32,13 +32,17 @@
     min-width: 200px;
     margin: auto;
     margin-bottom: 40px;
-    text-align: right;
+    text-align: left;
+    font-weight: 100;
+    font-size: 25px;
 }
 
 .newPatientDescriptionMobile {
     width: 80%;
     margin: auto;
     margin-bottom: 40px;
+    font-weight: 100;
+    font-size: 25px;
 }
 
 .newPatientImage {

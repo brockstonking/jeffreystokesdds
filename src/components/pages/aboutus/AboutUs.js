@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './AboutUs.css';
 import DrStokes from './DrStokes.jpg';
 import SandraStokes from './SandraStokes.jpg'
+import JudyFahrner from './JudyFahrner.jpg';
+import StokesTeam from './StokesTeam.jpg';
 
 class AboutUs extends Component {
     constructor(props){
@@ -17,6 +19,10 @@ class AboutUs extends Component {
                     img: SandraStokes,
                     name: 'Sandra Stokes',
                     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Lacus suspendisse faucibus interdum posuere. Libero enim sed faucibus turpis in eu mi bibendum. Magna fringilla urna porttitor rhoncus dolor purus non enim. Dui sapien eget mi proin sed libero enim sed faucibus. Ornare lectus sit amet est placerat in egestas. Sagittis eu volutpat odio facilisis mauris sit. Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. Pellentesque eu tincidunt tortor aliquam nulla. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Donec enim diam vulputate ut pharetra sit. Maecenas pharetra convallis posuere morbi leo urna molestie at. Nibh sed pulvinar proin gravida hendrerit lectus a. Aliquet nibh praesent tristique magna sit amet. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Elementum integer enim neque volutpat ac. A arcu cursus vitae congue mauris rhoncus aenean vel elit. In fermentum posuere urna nec tincidunt praesent semper.'
+                }, {
+                    img: JudyFahrner,
+                    name: 'Judy Fahrner',
+                    bio: `Judy Newcomb Fahrner was born and raised in Henderson, Nevada by Jerry and Freda. She has three sisters: Lyndee, Susan and Jerry. Judy is married to Tim Fahrner and together they have four children Jonalee, Jillie, Kaitlyn and Cole; as well as, three beautiful grandchildren Jillean, Ellie and Warren. While growing up in Henderson, Judy attended Sewell Elementary, Burkholder Middle School and Basic High School. Judy completed her degree in Dental Hygiene at the College of Southern Nevada. Following Graduation, Judy was hired to work at Dr. Jeffrey Stokes Dental office. She has enjoyed the opportunity to work for him as this marks her 21st year here. Judy said that the most delightful aspect of her job is, “talking to each patient. It is a family practice so she gets to see the same patient’s every hygiene visit and form great relationships with them. Some of whom have been patients here for years.” The reason that Judy decided to work at Dr. Stokes's dental office is that “he is an honest and charismatic person. These are all important characteristics to have not only as a person but as a dentist. He is always honest with the patient and does what is needed so the patient can have the best treatment necessary. He has also created a great team to work with, whom he respects & appreciates, so it makes it an excellent environment to work in. I am so thankful I have found such a great dentist to work for the past 20 years."`
                 }
             ],
             isMobile: window.innerWidth < 480 ? true : false
@@ -37,14 +43,14 @@ class AboutUs extends Component {
             return <div className={this.state.isMobile ? `individualBioParentMobile bioFor${i}Mobile` : `individualBioParent bioFor${i}`}>
                 <img src={ e.img } alt='' className={this.state.isMobile ? 'bioImgMobile' : 'bioImg'} />
                 <h1 className='bioName' >{ e.name }</h1>
-                <p className='bioDescription' >{ e.bio }</p>
+                <p className={this.state.isMobile ? 'bioDescriptionMobile' : 'bioDescription'} >{ e.bio }</p>
             </div>
         });
-        debugger
 
         return (
             <div className={this.state.isMobile ? 'aboutUsParentMobile' : 'aboutUsParent'}>
-                <h1 className='aboutUsTitle'>Our Team</h1>
+                <img src={StokesTeam} alt='' className={this.state.isMobile ? 'aboutUsStokesTeamPhotoMobile' : 'aboutUsStokesTeamPhoto'} />
+                <h1 className='aboutUsTitle'>Meet Our Team:</h1>
                 { bios }
             </div>
         )
