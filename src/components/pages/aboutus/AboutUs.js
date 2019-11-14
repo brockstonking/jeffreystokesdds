@@ -14,7 +14,8 @@ class AboutUs extends Component {
                 {
                     img: DrStokes,
                     name: 'Dr. Jeffrey Stokes, DDS',
-                    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eros in cursus turpis massa tincidunt dui ut ornare lectus. Tempor nec feugiat nisl pretium fusce id velit ut. Molestie nunc non blandit massa. Dolor magna eget est lorem ipsum dolor. Ultricies mi quis hendrerit dolor magna eget est. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Commodo ullamcorper a lacus vestibulum. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Eu volutpat odio facilisis mauris sit amet. Morbi non arcu risus quis varius quam. Eu turpis egestas pretium aenean pharetra magna ac. Sed vulputate mi sit amet. Facilisis sed odio morbi quis commodo. Quis varius quam quisque id diam vel quam elementum pulvinar.'
+                    bio: 'Dr. Jeffrey Stokes was born and raised in South East Idaho and is a graduate of Brigham Young University. After acquiring his Bachelor of Science degree in 1989, Dr. Stokes was admitted into a special scholarship program whereby 10 students were able to complete their first year of dental school at the University of Utah Medical School. He then completed his dental education at Creighton University in Omaha, Nebraska, graduating among the top of his class in 1993. In October of that same year, Dr. Stokes opened his Dental Practice in Henderson, Nevada. Committed to staying on top of the latest advancements in dental techniques and technology, Dr. Stokes takes multiple days of continuing education classes each year. But what truly sets Dr. Stokes apart from other dentists? He maintains professionality yet also has a knack for easing the fears of those who are terrified to come to the dentist. He knows how to enhance a patient’s appearance by restoring teeth to their natural healthy condition. Patients not only look good, they feel good after their visit with Dr. Stokes.',
+                    bio2: `Dr. Stokes loves spending time with his family. He has been married to his wife Sandra for 34 years, has 5 children (1 son and 4 daughters), and 5 grandchildren, with another on the way (2 girls and 3 boys). He enjoys running, biking, hiking, hunting, golfing and anything exciting in the outdoors. Dr. Stokes served a full-time mission for the Church of Jesus Christ of Latter-Day Saints in Taiwan from 1981-1983. Dr. Stokes and his wife Sandra are currently serving as BYU Worldwide Pathway Missionaries for the Church.`
                 }, {
                     img: SandraStokes,
                     name: 'Sandra Stokes',
@@ -22,12 +23,17 @@ class AboutUs extends Component {
                 }, {
                     img: JudyFahrner,
                     name: 'Judy Fahrner',
-                    bio: `Judy Newcomb Fahrner was born and raised in Henderson, Nevada by Jerry and Freda. She has three sisters: Lyndee, Susan and Jerry. Judy is married to Tim Fahrner and together they have four children Jonalee, Jillie, Kaitlyn and Cole; as well as, three beautiful grandchildren Jillean, Ellie and Warren. While growing up in Henderson, Judy attended Sewell Elementary, Burkholder Middle School and Basic High School. Judy completed her degree in Dental Hygiene at the College of Southern Nevada. Following Graduation, Judy was hired to work at Dr. Jeffrey Stokes Dental office. She has enjoyed the opportunity to work for him as this marks her 21st year here. Judy said that the most delightful aspect of her job is, “talking to each patient. It is a family practice so she gets to see the same patient’s every hygiene visit and form great relationships with them. Some of whom have been patients here for years.” The reason that Judy decided to work at Dr. Stokes's dental office is that “he is an honest and charismatic person. These are all important characteristics to have not only as a person but as a dentist. He is always honest with the patient and does what is needed so the patient can have the best treatment necessary. He has also created a great team to work with, whom he respects & appreciates, so it makes it an excellent environment to work in. I am so thankful I have found such a great dentist to work for the past 20 years."`
+                    bio: `Judy Newcomb Fahrner and her three sisters (Lyndee, Susan, and Jerry) were born and raised in Henderson, Nevada by Jerry and Freda. Married to Tim Fahrner, she and her husband have four children (Jonalee, Jillie, Kaitlyn, and Cole) as well as three beautiful grandchildren (Jillean, Ellie, and Warren). While growing up in Henderson, Judy attended Sewell Elementary, Burkholder Middle School and Basic High School.`,
+                    bio2: `After completing her degree in Dental Hygiene at the College of Southern Nevada, Judy was hired to work at Dr. Jeffrey Stokes' dental office. She has enjoyed the opportunity to work for him and has been a wonderful staff member for more than 20 years. As our dental office is a family practice, she gets to see the same patients at each of their hygiene visits and form great relationships with them. Some of these have been patients for years, and Judy has expressed that the most delightful aspect of her job is talking with each patient and getting to know them better. "Dr. Stokes is an honest and charismatic person. These are important characteristics to have - not only as a person but as a dentist also. He is always honest with the patient and does what is needed so the patient can have the best treatment necessary. He has also created a great team to work with, which he respects & appreciates. It makes his office an excellent environment to work in. I am so thankful I have found such a great dentist to work with for the past 20 years."`
                 }
             ],
             isMobile: window.innerWidth < 480 ? true : false
         }
     };
+
+    componentDidMount = () => {
+        window.scrollTo(0, 0);
+      }
 
     checkIfMobileView = () => {
         this.setState({
@@ -40,10 +46,12 @@ class AboutUs extends Component {
         window.addEventListener('resize', this.checkIfMobileView);
 
         const bios = this.state.biographies.map( (e, i) => {
+            let secondParagraph = e.bio2 ? <p className={this.state.isMobile ? 'bioDescriptionMobile' : 'bioDescription'} >{ e.bio2 }</p>: null
             return <div className={this.state.isMobile ? `individualBioParentMobile bioFor${i}Mobile` : `individualBioParent bioFor${i}`}>
                 <img src={ e.img } alt='' className={this.state.isMobile ? 'bioImgMobile' : 'bioImg'} />
                 <h1 className='bioName' >{ e.name }</h1>
                 <p className={this.state.isMobile ? 'bioDescriptionMobile' : 'bioDescription'} >{ e.bio }</p>
+                { secondParagraph }
             </div>
         });
 

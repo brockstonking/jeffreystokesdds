@@ -13,6 +13,10 @@ class HomePage extends Component {
         }
     }
 
+    componentDidMount = () => {
+        window.scrollTo(0, 0);
+      }
+
     checkIfMobileView = () => {
         this.setState({
             isMobile: window.innerWidth < 480 ? true : false

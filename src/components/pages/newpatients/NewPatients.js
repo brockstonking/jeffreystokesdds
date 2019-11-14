@@ -12,6 +12,10 @@ class NewPatients extends Component {
         }
     };
 
+    componentDidMount = () => {
+        window.scrollTo(0, 0);
+      }
+
     checkIfMobileView = () => {
         this.setState({
             isMobile: window.innerWidth < 716 ? true : false

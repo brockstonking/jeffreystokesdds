@@ -19,6 +19,10 @@ class ContactUs extends Component {
         }
     };
 
+    componentDidMount = () => {
+        window.scrollTo(0, 0);
+      }
+
     updateState = (e) => {
         this.setState({
             [e.name]: e.value

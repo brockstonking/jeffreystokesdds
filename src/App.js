@@ -13,18 +13,22 @@ class App extends Component {
       isMobile: window.innerWidth < 760 ? true : false
     }
   }
-
+  
+  componentDidMount = () => {
+    window.scrollTo(0, 0);
+  }
+  
   checkIfMobileView = () => {
     this.setState({
         isMobile: window.innerWidth < 760 ? true : false
     })
-}
+  }
 
 
   render(){
     window.addEventListener('resize', this.checkIfMobileView);
     return(
-      <Router>
+      <Router onUpdate={() => window.scrollTo(0, 0)}>
         <div className='App'>
           <NavBar mobile={this.state.isMobile} />
           { routes }
