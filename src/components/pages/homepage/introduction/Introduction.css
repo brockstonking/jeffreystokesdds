@@ -1,5 +1,6 @@
 .introductionParent {
     margin-top: 20vh;
+    font-weight: 100;
 }
 
 .introductionParagraph {
@@ -16,4 +17,32 @@
     font-size: 25px;
     font-family: sans-serif;
     font-weight: 100;
+}
+
+.homepageIntroductionPhoneLink {
+    text-decoration: none;
+    width: 50%;
+    margin: auto;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.homepageIntroductionOnlineBookingLink {
+    text-decoration: none;
+    width: 50%;
+    margin: auto;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.homepageIntroductionPhoneLink:hover {
+    text-decoration: underline;
+}
+
+.homepageIntroductionOnlineBookingLink:hover {
+    text-decoration: underline;
 }
