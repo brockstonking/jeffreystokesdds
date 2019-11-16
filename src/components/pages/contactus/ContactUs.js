@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ContactUs.css';
 import axios from 'axios';
 import DentalTools3 from './dentalTools3.png';
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 import * as Actions from './../../../ducks/reducer';
 
 class ContactUs extends Component {

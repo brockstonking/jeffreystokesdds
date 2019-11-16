@@ -5,7 +5,7 @@ import SandraStokes from './SandraStokes.jpg'
 import JudyFahrner from './JudyFahrner.jpg';
 import StokesTeam from './StokesTeam.jpg';
 import * as Actions from './../../../ducks/reducer';
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 
 class AboutUs extends Component {
     constructor(props){

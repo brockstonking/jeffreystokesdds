@@ -3,7 +3,7 @@ import './NewPatients.css';
 import DentalTools from './dentistTools.jpg';
 import NewPatientFile from './JSDDSNewPatient.pdf';
 import * as Actions from './../../../ducks/reducer';
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 
 class NewPatients extends Component {
     constructor(props){

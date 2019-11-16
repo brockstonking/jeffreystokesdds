@@ -3,7 +3,7 @@ import './HomePage.css';
 import Testimonials from './testimonials/Testimonials';
 import Introduction from './introduction/Introduction';
 import Location from './location/Location';
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 import * as Actions from './../../../ducks/reducer';
 
 class HomePage extends Component {
