@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { connect } from 'react-redux';
+import * as Actions from './../../ducks/reducer';
 
 class Footer extends Component {
     constructor (props) {
@@ -28,7 +30,7 @@ class Footer extends Component {
         ];
         const footerLinks = menuLinkItems.map( e => {
             return <div className='footerLinkParent'>
-                <Link className='footerLink' to={ e.link }><p className='footerLinkText'>{ e.title }</p></Link>
+                <Link className='footerLink' to={ e.link } onClick={ () => this.props.updateRoutePath(e.link) }><p className='footerLinkText'>{ e.title }</p></Link>
             </div>
         })
         return (
@@ -45,4 +47,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default connect(state => state, Actions)(Footer);

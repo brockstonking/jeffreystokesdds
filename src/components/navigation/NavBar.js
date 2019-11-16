@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as Actions from './../../ducks/reducer';
 
 class NavBar extends Component {
     constructor(props){
@@ -8,8 +10,7 @@ class NavBar extends Component {
 
         this.state = {
             isMobile: window.innerWidth < 730 ? true : false,
-            showMenuItemsDropdown: false,
-            currentRoute: '/'
+            showMenuItemsDropdown: false
         }
     };
 
@@ -51,18 +52,42 @@ class NavBar extends Component {
 
         let menuItems = !this.state.isMobile
         ? <div className='navBarLinkContainer'>
-            <Link className='navBarLink navBarHomePage' to='/' onClick={() => this.changeCurrentRoute('/')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/' ? { color: 'goldenrod' } : {}} >Home</p></Link>
-            <Link className='navBarLink navBarNewPatient' to='/newpatients' onClick={() => this.changeCurrentRoute('/newpatients')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/newpatients' ? { color: 'goldenrod' } : {}} >New Patients</p></Link>
-            <Link className='navBarLink navBarAboutUs' to='/aboutus' onClick={() => this.changeCurrentRoute('/aboutus')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/aboutus' ? { color: 'goldenrod' } : {}} >Our Team</p></Link>
-            <Link className='navBarLink navBarContactUs' to='/contactus' onClick={() => this.changeCurrentRoute('/contactus')} ><p className='innerNavBarLinkText' style={this.state.currentRoute == '/contactus' ? { color: 'goldenrod' } : {}} >Contact Us</p></Link>
+            <Link className='navBarLink navBarHomePage' to='/' onClick={() => this.props.updateRoutePath('/')} >
+                <p className='innerNavBarLinkText' style={this.props.currentRoute == '/' ? { color: 'goldenrod' } : {}} >
+                    Home
+                </p>
+            </Link>
+            <Link className='navBarLink navBarNewPatient' to='/newpatients' onClick={() => this.props.updateRoutePath('/newpatients')} >
+                <p className='innerNavBarLinkText' style={this.props.currentRoute == '/newpatients' ? { color: 'goldenrod' } : {}} >
+                    New Patients
+                </p>
+            </Link>
+            <Link className='navBarLink navBarAboutUs' to='/aboutus' onClick={() => this.props.updateRoutePath('/aboutus')} >
+                <p className='innerNavBarLinkText' style={this.props.currentRoute == '/aboutus' ? { color: 'goldenrod' } : {}} >
+                    Our Team
+                </p>
+            </Link>
+            <Link className='navBarLink navBarContactUs' to='/contactus' onClick={() => this.props.updateRoutePath('/contactus')} >
+                <p className='innerNavBarLinkText' style={this.props.currentRoute == '/contactus' ? { color: 'goldenrod' } : {}} >
+                    Contact Us
+                </p>
+            </Link>
         </div>
         : <div className='navBarLinkContainerMobile'>
             <img className='menuIcon' src='https://icon-library.net/images/menu-icon-white-png/menu-icon-white-png-27.jpg' alt='' onClick={() => this.dropdownHideOrDisplay()}/>
             <div className={ this.state.showMenuItemsDropdown ? 'menuItemsDropdown' : 'menuItemsDropdownHidden' }>
-                <Link className='dropdownMenuItem dropdownHome' to='/' onClick={() => {this.changeCurrentRoute('/'); this.dropdownHideOrDisplay(); }} >Home</Link>
-                <Link className='dropdownMenuItem dropdownNewPatients' to='/newpatients' onClick={() => {this.changeCurrentRoute('/newpatients'); this.dropdownHideOrDisplay(); }} >New Patients</Link>
-                <Link className='dropdownMenuItem dropdownAboutUs' to='/aboutus' onClick={() => {this.changeCurrentRoute('/aboutus'); this.dropdownHideOrDisplay(); }} >About Us</Link>
-               <Link className='dropdownMenuItem dropdownContactUs' to='/contactus' onClick={() => {this.changeCurrentRoute('/contactus'); this.dropdownHideOrDisplay(); }} >Contact Us</Link>
+                <Link className='dropdownMenuItem dropdownHome' to='/' onClick={() => {this.props.updateRoutePath('/'); this.dropdownHideOrDisplay(); }} >
+                    Home
+                </Link>
+                <Link className='dropdownMenuItem dropdownNewPatients' to='/newpatients' onClick={() => {this.props.updateRoutePath('/newpatients'); this.dropdownHideOrDisplay(); }} >
+                    New Patients
+                </Link>
+                <Link className='dropdownMenuItem dropdownAboutUs' to='/aboutus' onClick={() => {this.props.updateRoutePath('/aboutus'); this.dropdownHideOrDisplay(); }} >
+                    About Us
+                </Link>
+               <Link className='dropdownMenuItem dropdownContactUs' to='/contactus' onClick={() => {this.props.updateRoutePath('/contactus'); this.dropdownHideOrDisplay(); }} >
+                   Contact Us
+                </Link>
             </div>
         </div>
         return (
@@ -77,4 +102,4 @@ class NavBar extends Component {
     };
 }
 
-export default NavBar;
+export default connect(state => state, Actions)(NavBar);
