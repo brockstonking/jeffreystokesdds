@@ -4,6 +4,8 @@ import DrStokes from './DrStokes.jpg';
 import SandraStokes from './SandraStokes.jpg'
 import JudyFahrner from './JudyFahrner.jpg';
 import StokesTeam from './StokesTeam.jpg';
+import * as Actions from './../../../ducks/reducer';
+import connect from 'react-redux';
 
 class AboutUs extends Component {
     constructor(props){
@@ -31,6 +33,10 @@ class AboutUs extends Component {
             isMobile: window.innerWidth < 480 ? true : false
         }
     };
+
+    componentWillMount = () => {
+        this.props.updateRoutePath('/aboutus');
+    }
 
     componentDidMount = () => {
         window.scrollTo(0, 0);
@@ -66,4 +72,4 @@ class AboutUs extends Component {
     };
 }
 
-export default AboutUs;
+export default connect(state => state, Actions)(AboutUs);

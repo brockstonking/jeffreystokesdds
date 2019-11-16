@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './NewPatients.css';
 import DentalTools from './dentistTools.jpg';
 import NewPatientFile from './JSDDSNewPatient.pdf';
+import * as Actions from './../../../ducks/reducer';
+import connect from 'react-redux';
 
 class NewPatients extends Component {
     constructor(props){
@@ -11,6 +13,10 @@ class NewPatients extends Component {
             isMobile: window.innerWidth < 480 ? true : false
         }
     };
+
+    componentWillMount = () => {
+        this.props.updateRoutePath('/newpatients');
+    }
 
     componentDidMount = () => {
         window.scrollTo(0, 0);
@@ -39,4 +45,4 @@ class NewPatients extends Component {
     };
 }
 
-export default NewPatients;
+export default connect(state => state, Actions)(NewPatients);

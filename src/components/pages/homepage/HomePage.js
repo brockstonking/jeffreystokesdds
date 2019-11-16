@@ -3,6 +3,8 @@ import './HomePage.css';
 import Testimonials from './testimonials/Testimonials';
 import Introduction from './introduction/Introduction';
 import Location from './location/Location';
+import connect from 'react-redux';
+import * as Actions from './../../../ducks/reducer';
 
 class HomePage extends Component {
     constructor(props){
@@ -11,6 +13,10 @@ class HomePage extends Component {
         this.state = {
             isMobile: window.innerWidth < 480 ? true : false
         }
+    }
+
+    componentWillMount = () => {
+        this.props.udpateRoutePath('/');
     }
 
     componentDidMount = () => {
@@ -48,4 +54,4 @@ class HomePage extends Component {
     };
 }
 
-export default HomePage;
+export default connect(state => state, Actions)(HomePage);

@@ -1,5 +1,5 @@
 let initialState = {
-    currentRoute: '/'
+    currentRoute: ''
 }
 
 const SET_ROUTE_PATH = 'SET_ROUTE_PATH';

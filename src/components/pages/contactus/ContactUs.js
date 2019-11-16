@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './ContactUs.css';
 import axios from 'axios';
 import DentalTools3 from './dentalTools3.png';
+import connect from 'react-redux';
+import * as Actions from './../../../ducks/reducer';
 
 class ContactUs extends Component {
     constructor(props){
@@ -18,6 +20,10 @@ class ContactUs extends Component {
             disabled: false
         }
     };
+
+    componentWillMount = () => {
+        this.props.updateRoutePath('/contactus');
+    }
 
     componentDidMount = () => {
         window.scrollTo(0, 0);
@@ -124,4 +130,4 @@ class ContactUs extends Component {
     };
 }
 
-export default ContactUs;
+export default connect(state => state, Actions)(ContactUs);
