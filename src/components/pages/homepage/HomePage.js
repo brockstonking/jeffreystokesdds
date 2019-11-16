@@ -15,10 +15,6 @@ class HomePage extends Component {
         }
     }
 
-    componentWillMount = () => {
-        this.props.udpateRoutePath('/');
-    }
-
     componentDidMount = () => {
         window.scrollTo(0, 0);
       }
