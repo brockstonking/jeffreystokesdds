@@ -9,8 +9,8 @@ class Introduction extends Component {
     render () {
         return (
             <div className='introductionParent'>
-                <h1 className='introductionTitle'>You want an experienced dentist. We're here to help.</h1>
-                <p className={this.props.mobile ? 'introductionParagraphMobile' : 'introductionParagraph'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1 className='introductionTitle'>Dentistry Done Right</h1>
+                <p className={this.props.mobile ? 'introductionParagraphMobile' : 'introductionParagraph'}>Dr. Jeffrey Stokes has been practicing general dentistry in the Henderson, NV area for over 25 years. His seasoned experience gives him unique skills to not only help you look good, but also get your oral health back to where it needs to be. Offering general, cosmetic and implant services and much, much more, Dr. Stokes is a dentist for the whole family. To schedule an appointment, calls us at (number) or (book it online) today!</p>
             </div>
         )
     }
