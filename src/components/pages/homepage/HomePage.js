@@ -11,7 +11,7 @@ class HomePage extends Component {
         super(props);
 
         this.state = {
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 1000 ? true : false
         }
     }
 
@@ -21,7 +21,7 @@ class HomePage extends Component {
 
     checkIfMobileView = () => {
         this.setState({
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 1000 ? true : false
         })
     }
     

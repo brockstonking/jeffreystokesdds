@@ -16,7 +16,7 @@ class ContactUs extends Component {
             serviceRequested: '',
             prefferedTime: '',
             notesOrQuestions: '',
-            isMobile: window.innerWidth < 480 ? true : false,
+            isMobile: window.innerWidth < 1000 ? true : false,
             disabled: false
         }
     };
@@ -37,7 +37,7 @@ class ContactUs extends Component {
 
     checkIfMobileView = () => {
         this.setState({
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 1000 ? true : false
         })
     }
 

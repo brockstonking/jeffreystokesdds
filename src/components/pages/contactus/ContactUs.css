@@ -48,6 +48,10 @@
     text-align: left;
 }
 
+.inputParentMobile {
+    text-align: left;
+}
+
 .inputTitle {
     font-size: 25px;
     font-weight: 100;
@@ -79,6 +83,7 @@
     width: 40%;
     border-radius: 2px;
     box-shadow: 0px 0px 10px silver;
+    min-width: 400px;
 }
 
 .contactUsSubmitEmailButton {
