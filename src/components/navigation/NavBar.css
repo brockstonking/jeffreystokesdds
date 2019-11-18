@@ -107,7 +107,6 @@
     color: white;
     z-index: 200;
     font-size: 20px;
-    margin-top: 60px;
     text-decoration: none;
     margin-left: 20px;
     height: 20px;
@@ -115,4 +114,20 @@
 
 .telephoneNumber:hover .innerPhoneText {
     color: goldenrod;
+}
+
+.navBarTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.innerPhoneText {
+    margin-top: -25px;
+    float: left;
+}
+
+.navBarTitleAndNumber {
+    margin-top: 30px;
+    margin-left: 10px;
 }

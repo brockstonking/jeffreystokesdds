@@ -9,14 +9,14 @@ class NavBar extends Component {
         super(props);
 
         this.state = {
-            isMobile: window.innerWidth < 730 ? true : false,
+            isMobile: window.innerWidth < 910 ? true : false,
             showMenuItemsDropdown: false
         }
     };
 
     checkIfMobileView = () => {
         this.setState({
-            isMobile: window.innerWidth < 730 ? true : false
+            isMobile: window.innerWidth < 910 ? true : false
         })
     }
 
@@ -94,8 +94,10 @@ class NavBar extends Component {
             <div className='navBarParent'>
                 <div className='logoHolder'>
                     <p className='logoText J'>J</p><p className='logoText S'>S</p>
-                    <a href='tel:7025664133' className='telephoneNumber'><p className='innerPhoneText'>(702) 566-4133</p></a>
-                </div>
+                    <div className='navBarTitleAndNumber'>
+                        <h1 className='navBarTitle'>Jeffrey Stokes, DDS</h1>
+                        <a href='tel:7025664133' className='telephoneNumber'><p className='innerPhoneText'>(702) 566-4133</p></a></div>
+                    </div>
                 { menuItems }
             </div>
         )
