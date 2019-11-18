@@ -56,7 +56,7 @@ class ContactUs extends Component {
             notesOrQuestions
         } = this.state;
         if (name && email && notesOrQuestions) {
-            axios.post('/api/send_email', {
+            axios.post('https://node-server-backends.herokuapp.com/api/send_mail', {
                 name: name,
                 phone: phone,
                 email: email,
