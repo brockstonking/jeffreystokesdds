@@ -121,7 +121,7 @@ class ContactUs extends Component {
                             <p className={this.state.isMobile ? 'inputTitleMobile' : 'inputTitle'}>Questions or additional notes*</p>
                             <textarea rows='3' className={this.state.isMobile ? 'inputInputMobile' : 'inputInput'} disabled={this.state.disabled} name='notesOrQuestions' onChange={ e => this.updateState(e.target)} value={this.state.notesOrQuestions} />
                         </div>
-                        <div onClick={() => this.sendEmail()} className='contactUsSubmitEmailButton'>Submit</div>
+                        <div onClick={!this.state.disabled ? () => this.sendEmail() : null} className='contactUsSubmitEmailButton'>Submit</div>
                     </div>
                     {imgForMobile}
                 </div>
