@@ -88,9 +88,12 @@ class Testimonials extends Component {
             <img src='https://clipart.info/images/ccovers/1559839503star-png-1444.png' alt='' className='starIndividual' />
         </div>
 
+        let testimonialFade = {
+            opacity: this.state.testimonialOpacity
+        }
         
 
-        let testimonialDisplayed = <div className='individualTestimonial' style={{opacity: this.state.testimonialOpacity}}>
+        let testimonialDisplayed = <div className='individualTestimonial' style={ testimonialFade }>
             <div className='testimonialStars'>{ stars }</div>
             <p className='testimonialReview'>{this.state.testimonials[this.state.currentTestimonialIndex].review}</p>
             <p className='testimonialName'>-{this.state.testimonials[this.state.currentTestimonialIndex].firstName}</p>
