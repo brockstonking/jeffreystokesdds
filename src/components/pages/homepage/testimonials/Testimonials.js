@@ -32,50 +32,16 @@ class Testimonials extends Component {
                     review: `Dr Jeffrey Stokes is a very kind and gentle dentist. His office staff are wonderful to work with. I would recommend Dr.Stokes dental office to anyone who is looking for a dentist. He is great!`,
                     firstName: 'Rebekah'
                 }
-            ],
-            fade: 'in',
-            testimonialOpacity: 0
+            ]
         }
     }
     
     componentDidMount () {
-        for (let i = 0; i <= 500; i++) {
-            setTimeout(() => {
-                this.setState({
-                    testimonialOpacity: this.state.testimonialOpacity + .002
-                })
-            }, 1)
-        }
-        setTimeout(() => {
-            for (let i = 0; i <= 500; i++) {
-                setTimeout(() => {
-                    this.setState({
-                        testimonialOpacity: this.state.testimonialOpacity - .002
-                    })
-                }, 1)
-            }
-        }, 9500)
         setInterval(() => {
             this.setState({
-                currentTestimonialIndex: this.state.currentTestimonialIndex < this.state.testimonials.length - 1 ? this.state.currentTestimonialIndex + 1 : 0
+                currentTestimonialIndex: this.state.currentTestimonialIndex == this.state.testimonials.length - 1 ? 0 : this.state.currentTestimonialIndex + 1
             })
-            for (let i = 0; i <= 500; i++) {
-                setTimeout(() => {
-                    this.setState({
-                        testimonialOpacity: this.state.testimonialOpacity + .002
-                    })
-                }, 1)
-            }
-            setTimeout(() => {
-                for (let i = 0; i <= 500; i++) {
-                    setTimeout(() => {
-                        this.setState({
-                            testimonialOpacity: this.state.testimonialOpacity - .002
-                        })
-                    }, 1)
-                }
-            }, 9500)
-        }, 10000);
+        }, 10000)
     }
 
     render () {
@@ -90,7 +56,7 @@ class Testimonials extends Component {
 
         
 
-        let testimonialDisplayed = <div className='individualTestimonial' style={{opacity: this.state.testimonialOpacity}}>
+        let testimonialDisplayed = <div className='individualTestimonial' >
             <div className='testimonialStars'>{ stars }</div>
             <p className='testimonialReview'>{this.state.testimonials[this.state.currentTestimonialIndex].review}</p>
             <p className='testimonialName'>-{this.state.testimonials[this.state.currentTestimonialIndex].firstName}</p>
