@@ -62,3 +62,13 @@
 .newPatientTitleAndDescriptionMobile {
     margin-top: 150px;
 }
+
+.newPatientDescriptionPc {
+    width: 50%;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: 100;
+    font-size: 20px;
+}

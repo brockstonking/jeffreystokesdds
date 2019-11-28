@@ -10,12 +10,20 @@ class NewPatients extends Component {
         super(props);
 
         this.state = {
-            isMobile: window.innerWidth < 480 ? true : false
+            isMobile: window.innerWidth < 480 ? true : false,
+            os: 'Mac'
         }
     };
 
     componentWillMount = () => {
         this.props.updateRoutePath('/newpatients');
+        if (navigator.userAgent.indexOf('Mac') <= 0) {
+            this.setState({
+                os: 'Pc'
+            })
+            console.log('Running on PC')
+        }
+        
     }
 
     componentDidMount = () => {
@@ -30,11 +38,19 @@ class NewPatients extends Component {
 
     render(){
         window.addEventListener('resize', this.checkIfMobileView);
+        let descriptionClassName;
+        if (this.state.os == 'Pc' && !this.state.isMobile) {
+            descriptionClassName = 'newPatientDescriptionPc'
+        } else if (this.state.isMobile) {
+            descriptionClassName = 'newPatientDescriptionMobile'
+        } else {
+            descriptionClassName = 'newPatientDescription'
+        }
         return (
             <div className={this.state.isMobile ? 'newPatientParentMobile' : 'newPatientParent'}>
                 <div className={this.state.isMobile ? 'newPatientTitleAndDescriptionMobile' : 'newPatientTitleAndDescription'}>
                     <h1 className='newPatientTitle'>New Patient Form</h1>
-                    <p className={this.state.isMobile ? 'newPatientDescriptionMobile' : 'newPatientDescription'}>We are honored to welcome you to our dental office family! Before your first appointment, please print and fill out our New Patient Form and bring it to the office with you. This will help reduce the amount of time you spend waiting. Please also bring a form of ID and dental insurance card (if applicable).</p>
+                    <p className={descriptionClassName}>We are honored to welcome you to our dental office family! Before your first appointment, please print and fill out our New Patient Form and bring it to the office with you. This will help reduce the amount of time you spend waiting. Please also bring a form of ID and dental insurance card (if applicable).</p>
                     <a href={ NewPatientFile } download className='newPatientDownloadLink'><div className='newPatientDownloadButton'><p className='newPatientDownloadText'>Download New Patient Form</p></div></a>
                 </div>
                 <div className={this.state.isMobile ? 'newPatientImageParentMobile' : 'newPatientImageParent'}>
